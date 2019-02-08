@@ -27,6 +27,7 @@ urlpatterns = [
     #above maps any URLs starting
     #with rango/ to be handeled by
     #the rango application
-    url(r'^admin/', admin.site.urls)
+    url(r'^admin/', admin.site.urls),
+    url(r'^register/$', views.register, name = 'register')
     
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
